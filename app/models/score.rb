@@ -18,10 +18,6 @@ class Score < ActiveRecord::Base
   SCORE_STRUCT = Struct.new('Score', :value, :date, :user_id, :game_id)
 
 
-#  def as_json
-#    {value: @value, date: @date, user_id: @user_id, game_id: @game_id}
-#  end
-
   def self.as_struct(struct = nil)
     struct ||= SCORE_STRUCT
     arr = pluck(:value, :date, :user_id, :game_id)

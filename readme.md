@@ -4,7 +4,8 @@
 
 The speedy api demonstrates how to more efficiently read and use thousands of database records in a Rails / ActiveRecord application.
 
-Clone the reposititory and run bundle install, rake db:setup, and rake
-db:init to run locally.
+Clone the reposititory and run bundle install
+Run rake db:setup to setup the database and insert the seed data
+Fair warning: the db:init sets up 1000 scores for each game & user.  It will take a few minutes!
 
 Benchmark tests in the benchmarks folder can be run by typing ruby [filename] at the command line

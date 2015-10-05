@@ -1,7 +1,10 @@
 class Api::V2::ScoresController < ApplicationController
   def index
-    #send = Score.all
-    #render json: send
-    render json: Oj.dump(ScoreReader.build_from_relation(Score.all), mode: :compat)
+    scores = ScoreReader.build_from_relation(Score.where(user_id: params[:user_id]))
+    hash = {
+      meta: {user_id: params[:user_id], count: scores.length},
+      scores: scores
+    }
+    render json: Oj.dump(hash , mode: :compat)
   end
 end

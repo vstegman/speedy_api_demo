@@ -53,6 +53,7 @@ GEM
       execjs
     coffee-script-source (1.9.1.1)
     debug_inspector (0.0.2)
+    descriptive-statistics (2.1.2)
     erubis (2.7.0)
     execjs (2.6.0)
     git-version-bump (0.15.1)
@@ -156,6 +157,7 @@ DEPENDENCIES
   benchmark_suite
   byebug
   coffee-rails (~> 4.1.0)
+  descriptive-statistics
   jbuilder (~> 2.0)
   jquery-rails
   meta_request

@@ -1,8 +1,10 @@
 class Api::V2::StatsController < ApplicationController
   def index
-    #send = Score.all
-    #render json: send
-    average = Score.all.as_struct.map {|s| s.value}
-    render json: Oj.dump(ScoreReader.build_from_relation(Score.all), mode: :compat)
+    stats = ScoreStat.new(Score.where(user_id: params[:user_id]))
+    hash = {
+      meta: {user_id: params[:user_id]},
+      stats: stats
+    }
+    render json: Oj.dump(hash , mode: :compat)
   end
 end
