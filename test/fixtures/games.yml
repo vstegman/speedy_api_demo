@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: games
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  category   :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: MyString
+
+two:
+  name: MyString
+  category: MyString

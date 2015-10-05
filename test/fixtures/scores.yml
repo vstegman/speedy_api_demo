@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: scores
+#
+#  id         :integer          not null, primary key
+#  value      :integer
+#  date       :date
+#  user_id    :integer
+#  game_id    :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: 1
+  date: 2015-09-24
+  user_id: 
+  game_id: 
+
+two:
+  value: 1
+  date: 2015-09-24
+  user_id: 
+  game_id: 
