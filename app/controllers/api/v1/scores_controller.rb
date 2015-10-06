@@ -5,7 +5,9 @@ class Api::V1::ScoresController < ApplicationController
       meta: {user_id: params[:user_id], count: scores.length},
       scores: scores
     }
-    #render json: send
-    render json: Oj.dump(hash, mode: :compat)
+    render json: hash
+    # Step 2 Use Oj
+    #render json: Oj.dump(hash, mode: :compat)
   end
 end
+

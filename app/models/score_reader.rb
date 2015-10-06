@@ -15,7 +15,12 @@ class ScoreReader
   end
 
   def as_json
-    {value: @value, date: @date, user_id: @user_id, game_id: @game_id}
+    {
+      value: @value,
+      date: @date,
+      user_id: @user_id,
+      game_id: @game_id
+    }
   end
 
 end

@@ -1,14 +1,19 @@
 class ScoreStat
 
   def initialize(relation)
-    @stats = DescriptiveStatistics::Stats.new(relation.pluck(:value))
+    @scores = relation.as_struct
+  end
+
+  def mean
+    sum = 0
+    @scores.each {|s| sum += s.value}
+    sum / @scores.length
   end
 
   def to_hash
     {
-      count: @stats.length,
-      mean: @stats.mean,
-      skill_score: @stats.mean / @stats.standard_deviation
+      count: @scores.length,
+      mean: mean
     }
   end
 end
