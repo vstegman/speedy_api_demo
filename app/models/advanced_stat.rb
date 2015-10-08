@@ -15,4 +15,5 @@ class AdvancedStat
       skill_score: @stats.mean / @stats.standard_deviation
     }
   end
+
 end
